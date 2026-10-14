@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>卒業論文アンケート</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+      line-height: 1.8;
+    }
+    a {
+      display: inline-block;
+      padding: 15px 25px;
+      background-color: #3B82F6;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>卒業論文アンケート</h2>
+
+  <p>アンケートへのご協力ありがとうございます。</p>
+
+  <p>下のボタンからアンケートにお進みください。</p>
+
+  <a id="surveyLink" href="#">アンケートへ進む</a>
+
+  <p style="font-size:13px;color:gray;">
+    ※すでに回答された方は、再回答不要です。
+  </p>
+
+  <script>
+    const formUrls = [
+      "https://docs.google.com/forms/d/e/1FAIpQLSdN2svXi73xlpBtsgkRo8z5BmjNXO0APAeVgKYex9nUmd4H_A/viewform",
+      "https://docs.google.com/forms/d/e/1FAIpQLSfm2nsFv6qfnlqBJmFyysPmdgqZiALL9c9wiyxFlr2Nc756IQ/viewform",
+      "https://docs.google.com/forms/d/e/1FAIpQLSdRGXDF54wHLFz7udZBty34ewmwTkls5jpmHe_xVHH4IMBfaA/viewform",
+      "https://docs.google.com/forms/d/e/1FAIpQLSdkrEAffkezYrJ6ckAEIIv_ZcSyj5zGdBy9V2j5b-YlRN6WPA/viewform"
+    ];
+
+    // 4つのフォームからランダムに1つ選ぶ
+    const index = Math.floor(Math.random() * formUrls.length);
+
+    // 同じ画面でGoogleフォームへ移動する
+    document.getElementById("surveyLink").href = formUrls[index];
+  </script>
+
+</body>
+</html>
